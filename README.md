@@ -1,19 +1,19 @@
 # Mantu-Ngopi — UI/UX Wireframe
 
-Wireframe statis for **Sistem Informasi Cafe Mantu-Ngopi**.
-Dibangun berdasarkan dokumen desain dalam mata kuliah **Praktikum Rekayasa Perangkat Lunak**.
+Static Wireframe for **Sistem Informasi Cafe Mantu-Ngopi**.
+Dibangun berdasarkan dokumen perencanaan desain dalam matkul **Praktikum Rekayasa Perangkat Lunak**.
 
 > ⚠️ This is a **wireframe / UI/UX mockup** not a production application.
-> (No backend, no auth, **all data are dummies**).
+> (No backend, no auth, dummy data).
 
 ---
 
 ## ✨ Tujuan
 
+- Menunjang keperluan **Praktikum Rekayasa Perangkat Lunak**.
 - Menerjemahkan dokumen perencanaan desain menjadi interactive HTML/CSS wireframe.
-- Menyediakan referensi visual yang konsisten untuk developer & stakeholder.
-- Mempermudah review alur per peran (Manager, Kasir, Logistik) tanpa perlu setup backend.
-- Menunjang keperluan **Praktikum Rekayasa Perangkat Lunak**
+- Menyediakan referensi visual yang konsisten untuk asisten praktikum, developer & stakeholder.
+- Mempermudah review alur per peran (Manager, Kasir, Logistik) without backend.
 
 ---
 
@@ -31,7 +31,7 @@ Dibangun berdasarkan dokumen desain dalam mata kuliah **Praktikum Rekayasa Peran
 
 | Peran | Fokus | Halaman utama |
 |---|---|---|
-| **Manager** | Operasional kafe end-to-end | Dashboard, Kategori, Bahan Baku, Menu & Harga, Transaksi, Restock, Karyawan |
+| **Manager** | End-to-end Cafe Operations | Dashboard, Kategori, Bahan Baku, Menu & Harga, Transaksi, Restock, Karyawan |
 | **Cashier** | Pencatatan pesanan & transaksi | Dashboard, Pemesanan, Transaksi |
 | **Logistic** | Stok & restock bahan baku | Dashboard, Bahan Baku, Restock |
 
@@ -39,13 +39,13 @@ Dibangun berdasarkan dokumen desain dalam mata kuliah **Praktikum Rekayasa Peran
 
 ## 🗺️ Route Map
 
-### Auth & Profile (3 routes)
+### Auth & Profile (3 pages)
 - `/login` : Halaman login (all users)
 - `/profile` : Profil akun pengguna
 - `/change-password` : Request ganti password
 
-### Manager (7 routes)
-- `/manager` : Dashboard ringkasan (KPI, grafik 7 hari, perhatian stok, menu terlaris)
+### Manager (7 pages)
+- `/manager` : Dashboard ringkasan (KPI, grafik 7 hari, perhatian stok, menu terlaris, dll)
 - `/manager/categories` : Kelola kategori menu
 - `/manager/supplies` : Kelola bahan baku
 - `/manager/products` : Kelola menu, harga, & resep
@@ -53,42 +53,43 @@ Dibangun berdasarkan dokumen desain dalam mata kuliah **Praktikum Rekayasa Peran
 - `/manager/restocks` : Riwayat restock
 - `/manager/users` : Manajemen akun karyawan
 
-### Cashier (3 routes)
+### Cashier (3 pages)
 - `/cashier` : Ringkasan transaksi harian
 - `/cashier/products` : List menu untuk membuat pesanan baru
 - `/cashier/transactions` : Histori transaksi milik kasir
 
-### Logistic (3 routes)
+### Logistic (3 pages)
 - `/logistic` : Ringkasan stok bahan baku
 - `/logistic/supplies` : Pantau stok & restock cepat
 - `/logistic/restocks` : Catat & pantau pembelian bahan baku
 
-Indeks visual semua halaman tersedia di route root **`/`** (`src/pages/Index.tsx`).
+Indeks visual semua halaman bisa diakses di root langsung **`/`** (`src/pages/Index.tsx`).
 
 ---
 
 ## 🎨 Design System
 
 - Ini pake tailwind, cuma jujur banyak dibantu AI sih
-- **Tema**: gelap, aksen ungu (`--primary: 270 91% 65%`).
-- Semua warna disimpan sebagai **HSL semantic tokens** di `src/index.css` — komponen tidak boleh memakai warna mentah seperti `text-white` / `bg-black`.
+- **Theme**: gelap, aksen ungu (`--primary: 270 91% 65%`).
+- All colors are stored on **HSL semantic tokens** => `src/index.css`.
 - Komponen reusable wireframe ada di `src/components/wireframe/`:
-  - `DashboardLayout.tsx` — sidebar role-aware + topbar
-  - `ui.tsx` — `Pill`, `PrimaryButton`, `IconButton`, dsb.
+  - `DashboardLayout.tsx` : sidebar role-aware + topbar
+  - `ui.tsx` :`Pill`, `PrimaryButton`, `IconButton`.
+  - dan sebagainyaa
 
 ---
 
 ## 🚀 Run Locally
 
-```direc. terminal
+```
 npm install
 npm run dev
 ```
 
-Buka `http://localhost:5173` lalu mulai eksplorasi dari `/` (galeri wireframe) atau `/login`.
+`http://localhost:5173` start from `/` (galeri wireframe), `/login` juga boleh.
 
 ### Other Scripts
-```direc. terminal
+```
 npm run build       # production build
 npm run preview     # preview build
 npm run lint        # eslint

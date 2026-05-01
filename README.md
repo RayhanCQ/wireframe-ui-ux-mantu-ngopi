@@ -3,7 +3,7 @@
 Wireframe statis for **Sistem Informasi Cafe Mantu-Ngopi**.
 Dibangun berdasarkan dokumen desain dalam mata kuliah **Praktikum Rekayasa Perangkat Lunak**.
 
-> ⚠️ This is a **wireframe / UI/UX mockup ** not a production application.
+> ⚠️ This is a **wireframe / UI/UX mockup** not a production application.
 > (No backend, no auth, **all data are dummies**).
 
 ---
@@ -121,7 +121,7 @@ src/
 
 - No form submits, login button leads straight to dashboard
 - Tidak ada validasi, otorisasi, atau persistensi data.
-- Angka, tabel, grafik, dan riwayat hanyalah **placeholder visual**.
+- Angka, tabel, grafik, dan riwayat cuman **placeholder visual**.
 - Not fully optimized for mobile **yet**, optimized for desktop screens with resolution of ≥ 1280px.
 
 ---
